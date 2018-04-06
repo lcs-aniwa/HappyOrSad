@@ -19,7 +19,7 @@ guard let input = rawInput else {
 
 // Print out the input provided
 print("You said:")
-print(rawInput) // optional String
+// print(rawInput) // optional String
 print(input) // non-optional
 
 // Process - inspect each character
@@ -31,7 +31,7 @@ for individualCharacter in input {
     print(individualCharacter)
     
     // Categorize the character
-    if individualCharacter == "😃" || individualCharacter == "☺️" || individualCharacter == "🙂" || individualCharacter == "😄" {
+    if individualCharacter == "😃" || individualCharacter == "😊" || individualCharacter == "🙂" || individualCharacter == "😄" {
         // Track a happy
         happyCount += 1
     } else if individualCharacter == "🙁"  || individualCharacter == "☹️" || individualCharacter == "😔" || individualCharacter == "😕"  {
@@ -53,6 +53,8 @@ if happyCount == sadCount {
     print("happy")
 } else if sadCount > happyCount {
     print("sad")
+} else if happyCount == 0 && sadCount == 0 {
+    print ("none")
 }
 
 
